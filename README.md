@@ -1,92 +1,166 @@
-# middlemist-di
+<h1 align="center"><a href="#" target="_blank">帝俊企业资源计划系统 (Dijun ERP)</a></h1>
+<div align="center">
+ <strong>
+  下一代智能ERP系统
+ </strong>
+</div>
+<br />
 
+<div align="center">
+  <!-- Crates version -->
+  <a href="https://spring.io/projects/spring-boot#learn">
+    <img alt="Static Badge" src="https://img.shields.io/badge/spring-boot?label=Spring%20Boot%203.1.3">
+  </a>
+ <a href="https://codecov.io/gh/wansenai/eairp" > 
+    <img src="https://codecov.io/gh/wansenai/eairp/graph/badge.svg?token=6OO8JX0ZVV"/> 
+ </a>
+  <a href="#">
+    <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/wansenai/wansenerp/maven.yml">
+  </a>
+  <!-- commits -->
+  <a href="#">
+    <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/wansenai/wansenerp/master">
+  </a>
+   <a href="">
+    <img src="https://img.shields.io/github/repo-size/wansenai/eairp"/>
+  </a>
+</div>
+<br />
 
+## 简介
 
-## Getting started
+**帝俊 ERP (Dijun ERP)** 是基于现代技术栈构建的下一代智能企业资源计划系统。在传统ERP业务功能的基础上，我们深度集成了GPT大模型能力，支持DeepSeek等多种模型扩展。系统不仅提供进销存、财务、生产等核心业务管理，还允许用户通过自然语言与系统交互，实现智能查阅、自动化表单提交等创新功能。
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+帝俊 ERP 旨在为个人和企业提供一个可高度定制、易于部署且完全免费的开源解决方案。
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## 核心特性
 
-## Add your files
+- **智能交互**: 集成GPT能力，支持自然语言查询和业务操作。
+- **全面管理**: 涵盖采购、销售、库存、财务、生产等全流程业务。
+- **快速部署**: 支持Docker容器化部署，开箱即用。
+- **开源免费**: 基于Apache-2.0/MIT双重许可，商业友好。
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## 系统截图
 
+<div align="center">
+  <img src="./运行示例图/ee28e4f7-1f75-4ca4-8f2c-1444e79a71a6.png" width="800" alt="系统截图1" />
+  <br/><br/>
+  <img src="./运行示例图/aa7f3832-7793-4fe3-8af3-91113d038328.png" width="800" alt="系统截图2" />
+  <br/><br/>
+  <img src="./运行示例图/fe12bfee-87bc-4834-96f6-a475875c0e53.png" width="800" alt="系统截图3" />
+  <br/><br/>
+  <img src="./运行示例图/78cd6b8f-c103-439c-ad31-f3dc377752e7.png" width="800" alt="系统截图4" />
+  <br/><br/>
+  <img src="./运行示例图/e7aa2eaf-b5e0-4edb-8974-81ecd86bc345.png" width="800" alt="系统截图5" />
+  <br/><br/>
+  <img src="./运行示例图/8e217add-2f2a-4513-818c-71d7bde969ab.png" width="800" alt="系统截图6" />
+  <br/><br/>
+  <img src="./运行示例图/773f2849-ff33-4232-9cf8-30dc9cafe471.png" width="800" alt="系统截图7" />
+  <br/><br/>
+  <img src="./运行示例图/4f7613bb-6cb1-4486-a8fa-37985295ad86.png" width="800" alt="系统截图8" />
+  <br/><br/>
+  <img src="./运行示例图/192afa47-bdc7-4455-b505-6f392e9d6fde.png" width="800" alt="系统截图9" />
+  <br/><br/>
+  <img src="./运行示例图/3ef29717-8855-46f5-a306-ca3ba18c0ec3.png" width="800" alt="系统截图10" />
+  <br/><br/>
+  <img src="./运行示例图/ae7eb57a-4304-4377-9ea3-c7b23dca139b.png" width="800" alt="系统截图11" />
+  <br/><br/>
+  <img src="./运行示例图/dfad24f9-9fa9-41e5-8dea-7b5c8967665c.png" width="800" alt="系统截图12" />
+</div>
+
+## Online preview
+- 测试账号: admin
+- 测试密码: 123456
+
+## 快速开始
+我们提供了一种更全面的Docker部署方法，可以在[Docker](https://github.com/eairps/eairp/blob/master/docker/README_ZH.md)文件夹中找到
+
+### 先决条件
+- Docker Engine 20.10+
+- Docker Compose v2.17+
+
+### 1. Docker Compose（推荐）
+
+**适用场景**: 本地没有MySQL/Redis环境，需要快速启动完整的服务栈。
+
+```bash
+# Clone deployment repository
+git clone https://github.com/eairps/eairp.git
+
+cd eairp
+
+# Start services
+docker compose up -d
 ```
-cd existing_repo
-git remote add origin http://47.103.205.229:8099/glamechang/middlemist-di.git
-git branch -M main
-git push -uf origin main
+
+### 2. Docker 独立容器
+
+**适用场景**: MySQL/Redis服务已经存在，需要自定义数据库配置。
+
+**步骤 1**: 创建专用网络
+
+```console
+docker network create eairp-net
 ```
 
-## Integrate with your tools
+**步骤 2**: 启动 MySQL 容器
 
-- [ ] [Set up project integrations](http://47.103.205.229:8099/glamechang/middlemist-di/-/settings/integrations)
+```console
+docker run -d --name mysql-eairp \
+  --network eairp-net \
+  -p 3306:3306 \
+  -v /path/to/mysql:/var/lib/mysql \
+  -e MYSQL_ROOT_PASSWORD=123456 \
+  -e MYSQL_USER=eairp \
+  -e MYSQL_PASSWORD=123456 \
+  mysql:8.3 \
+  --character-set-server=utf8mb4 \
+  --collation-server=utf8mb4_bin
+```
 
-## Collaborate with your team
+**步骤 3**: 启动 Redis 容器
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+```console
+docker run -d --name redis-eairp \
+  --network eairp-net \
+  -p 6379:6379 \
+  -v /path/to/redis/data:/data \
+  redis:7.0 \
+  redis-server --requirepass 123456
+```
 
-## Test and Deploy
+**步骤 4**: 启动 Dijun ERP 容器
 
-Use the built-in continuous integration in GitLab.
+配置参数：
+|  环境变量	   | 说明  |  示例值  |  
+|  ----  | ----  | ----  |
+| SPRING_DATASOURCE_URL  | MySQL connection address | jdbc:mysql://mysql-eairp:3306/eairp |
+| SPRING_REDIS_HOST	  | Redis host address | redis-eairp |
+| API_BASE_URL		  | Front-end API basic path | http://your-domain.com/erp-api |
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+```console
+docker run -d --name eairp \
+  --network eairp-net \
+  -p 3000:80 \
+  -p 8088:8088 \
+  -e SPRING_DATASOURCE_URL="jdbc:mysql://mysql-eairp:3306/eairp" \
+  -e SPRING_DATASOURCE_USERNAME=eairp \
+  -e SPRING_DATASOURCE_PASSWORD=123456 \
+  -e SPRING_REDIS_HOST=redis-eairp \
+  -e SPRING_REDIS_PASSWORD=123456 \
+  wansenai/eairp:latest
+```
 
 ## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+根据以下任一许可证之一，对本项目中的代码和文档进行许可：
+
+- Apache License, Version 2.0, [LICENSE-APACHE](LICENSE-APACHE)
+- MIT license [LICENSE-MIT](LICENSE-MIT)
+根据您的选择。
+
+
+## 贡献
+我们欢迎每一位贡献者，无论是在代码还是文档方面。
+
+除非您另有明确说明，否则有意提交以纳入 根据Apache-2.0许可证的定义，您的作品应具有上述双重许可，没有任何附加条款或条件。

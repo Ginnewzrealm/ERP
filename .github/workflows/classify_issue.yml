@@ -1,0 +1,36 @@
+name: Classify Issue
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  classify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Classify Issue
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.WANSEN_AI_TOKEN }}
+          script: |
+            const issue = context.payload.issue;
+            const labelsToAdd = ['status: waiting-for-triage']; 
+            
+            if (issue.title && issue.title.includes('java')) {
+              labelsToAdd.push('theme: java-21');
+            } 
+            if (issue.title && issue.title.includes('kotlin')) {
+              labelsToAdd.push('theme: kotlin');
+            }
+            
+            await github.issues.addLabels({
+              owner: 'wansenai',
+              repo: 'eairp',
+              issue_number: issue.number,
+              labels: labelsToAdd
+            });
