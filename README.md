@@ -87,7 +87,7 @@
 # Clone deployment repository
 git clone https://www.gitcc.com/glamechang/middlemist-di.git
 
-cd eairp
+cd middlemist-di
 
 # Start services
 docker compose up -d
