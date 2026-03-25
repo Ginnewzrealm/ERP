@@ -85,7 +85,7 @@
 
 ```bash
 # Clone deployment repository
-git clone https://github.com/eairps/eairp.git
+git clone https://www.gitcc.com/glamechang/middlemist-di.git
 
 cd eairp
 
